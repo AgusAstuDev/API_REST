@@ -1,4 +1,4 @@
-package com.example.inicial1.dtos;
+package com.apirest.inicial.dtos;
 
 
 import lombok.*;
