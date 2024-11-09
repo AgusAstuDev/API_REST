@@ -1,10 +1,8 @@
 package com.apirest.inicial.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 @Entity
 @AllArgsConstructor
@@ -13,10 +11,16 @@ import lombok.*;
 @Getter
 @ToString
 @Builder
+@Audited
 public class Domicilio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name="calle")
     private String calle;
+    @Column(name = "numero")
     private int numero;
+    @OneToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "FK_LOCALIDAD")
+    private Localidad localidad;
 }

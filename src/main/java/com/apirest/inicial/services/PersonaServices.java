@@ -13,7 +13,7 @@ import java.util.Optional;
 @Service
 public class PersonaServices implements BaseService<Persona> {
     @Autowired
-     PersonaRepository personaRepository;
+    PersonaRepository personaRepository;
 
     @Override
     @Transactional

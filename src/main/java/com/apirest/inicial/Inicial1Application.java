@@ -8,5 +8,8 @@ public class Inicial1Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Inicial1Application.class, args);
+        System.out.println("----------------------");
+        System.out.println("API_REST_1 funcionando");
+        System.out.println("----------------------");
     }
 }
